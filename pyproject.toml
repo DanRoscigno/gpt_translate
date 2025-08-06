@@ -28,7 +28,6 @@ dependencies = [
     "tiktoken>=0.5",
     "fastcore>=1.5.29",
     "weave>=0.50.3",
-    "tqdm>=4.66.4",
     "simple_parsing>=0.1.5",
 ]
 
@@ -43,3 +42,11 @@ homepage = "https://github.com/tcapelle/gpt_translate"
 "gpt_translate.new_files" = "gpt_translate.cli:new_files"
 "gpt_translate.eval" = "gpt_translate.cli:eval"
 
+[tool.hatch.version]
+path = "src/gpt_translate/version.py" 
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "pytest-asyncio>=1.1.0",
+]
